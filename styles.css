@@ -2,6 +2,9 @@
     --menu-bar-width: 60px;
     --menu-bar-height: 10px;
 }
+#menu:hover {
+    background-color: transparent;
+}
 
 #menu {
     background-color: #D84282;
@@ -10,7 +13,11 @@
     height: var(--menu-bar-height);
     margin: 100px;
 }
+#menu:hover {
+    background-color: white;
+    transition: all 1.0ms ease;
 
+}
 #menu::before,
 #menu::after {
     background-color: #D84282;
@@ -30,4 +37,23 @@
     left: 0;
     top: 20px;
 }
-
+#menu:hover::after {
+    /*background-color: white;*/
+    display: block;
+    content: "";
+    width: var(--menu-bar-width);
+    height:var(--menu-bar-height);
+    position:absolute;
+    transform: rotate(45deg);
+    top: 0px;
+}
+#menu:hover::before {
+    /*background-color:white;*/
+    display: block;
+    content: "";
+    width: var(--menu-bar-width);
+    height:var(--menu-bar-height);
+    position: absolute;
+    transform: rotate(135deg);
+    top: 0px;
+}
